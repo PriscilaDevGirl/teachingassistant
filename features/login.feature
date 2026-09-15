@@ -9,6 +9,7 @@ Feature: Login
     Given que estou na tela de login
     When informo uma senha inválida
     Then devo visualizar uma mensagem de erro
+    Then o acesso ao sistema deve ser bloqueado
 
   Scenario: Login com usuário inexistente
     Given que estou na tela de login
@@ -19,3 +20,8 @@ Feature: Login
     Given que estou na tela de login
     When tento entrar sem informar usuário e senha
     Then devo receber uma mensagem solicitando o preenchimento dos campos
+
+  Scenario: Realizar login com usuário inválido
+    Given que estou na tela de login
+    When informo um usuário inválido
+    Then devo visualizar uma mensagem de erro
