@@ -41,3 +41,8 @@ Feature: Login
     Given que estou na tela de login
     When informo uma senha incorreta várias vezes
     Then devo receber uma mensagem de bloqueio temporário
+
+  Scenario: Login com usuário bloqueado
+    Given que estou na tela de login
+    When informo um usuário bloqueado
+    Then devo receber uma mensagem informando que o usuário está bloqueado
