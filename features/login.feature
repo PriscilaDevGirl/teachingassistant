@@ -32,3 +32,8 @@ Feature: Login
     Then devo visualizar uma mensagem solicitando o preenchimento da senha
     And não devo conseguir acessar o sistema
 
+  Scenario: Login com senha expirada
+    Given que estou na tela de login
+    When informo uma senha expirada
+    Then devo receber uma mensagem solicitando a troca da senha
+
