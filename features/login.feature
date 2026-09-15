@@ -21,7 +21,14 @@ Feature: Login
     When tento entrar sem informar usuário e senha
     Then devo receber uma mensagem solicitando o preenchimento dos campos
 
+HEAD
   Scenario: Realizar login com usuário inválido
     Given que estou na tela de login
     When informo um usuário inválido
     Then devo visualizar uma mensagem de erro
+
+  Scenario: Realizar login sem informar senha
+    Given que estou na tela de login
+    When não informo uma senha
+    Then devo visualizar uma mensagem solicitando a senha
+dev
