@@ -26,7 +26,7 @@ Feature: Login
     When informo um usuário inválido
     Then devo visualizar uma mensagem de erro
 
-  Scenario: Realizar login sem informar senha
+   Scenario: Realizar login sem informar senha
     Given que estou na tela de login
     When informo um usuário válido e não informo uma senha
     Then devo visualizar uma mensagem solicitando o preenchimento da senha
@@ -37,3 +37,7 @@ Feature: Login
     When informo uma senha expirada
     Then devo receber uma mensagem solicitando a troca da senha
 
+  Scenario: Login com senha incorreta após várias tentativas
+    Given que estou na tela de login
+    When informo uma senha incorreta várias vezes
+    Then devo receber uma mensagem de bloqueio temporário
