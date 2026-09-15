@@ -19,3 +19,8 @@ Feature: Login
     Given que estou na tela de login
     When tento entrar sem informar usuário e senha
     Then devo receber uma mensagem solicitando o preenchimento dos campos
+
+  Scenario: Realizar login sem informar senha
+    Given que estou na tela de login
+    When não informo uma senha
+    Then devo visualizar uma mensagem solicitando a senha
