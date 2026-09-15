@@ -28,6 +28,7 @@ Feature: Login
 
   Scenario: Realizar login sem informar senha
     Given que estou na tela de login
-    When não informo uma senha
-    Then devo visualizar uma mensagem solicitando a senha
+    When informo um usuário válido e não informo uma senha
+    Then devo visualizar uma mensagem solicitando o preenchimento da senha
+    And não devo conseguir acessar o sistema
 
